@@ -1,0 +1,3 @@
+oc_planning_homepage:
+    path:     /planning/{name}
+    defaults: { _controller: OCPlanningBundle:Default:index }

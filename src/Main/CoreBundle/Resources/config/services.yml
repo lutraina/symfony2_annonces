@@ -1,0 +1,11 @@
+parameters:
+#    main_core.example.class: Main\CoreBundle\Example
+
+services:
+#    main_core.example:
+#        class: %main_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    main_core.antispam:
+        class: Main\CoreBundle\Antispam\MainAntispam
+        arguments: [@mailer, %locale%, 50]

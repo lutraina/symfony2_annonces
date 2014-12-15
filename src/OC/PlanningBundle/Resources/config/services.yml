@@ -1,0 +1,14 @@
+parameters:
+#    oc_planning.example.class: OC\PlanningBundle\Example
+
+#    oc_planning.example:
+#        class: %oc_planning.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    oc_planning.antispam:
+        class: OC\PlanningBundle\Antispam\OCAntispam
+        arguments: [@mailer, @main_core.antispam, %locale%, 50]
+    
+    oc_planning.InputValidator:
+        class: OC\PlanningBundle\Validator\InputValidator
+        arguments: [@mailer, %locale%, 50]
