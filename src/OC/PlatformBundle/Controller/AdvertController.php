@@ -27,7 +27,8 @@ class AdvertController extends Controller
     }
 
     // Ici je fixe le nombre d'annonces par page à 3
-    // Mais bien sûr il faudrait utiliser un paramètre, et y accéder via $this->container->getParameter('nb_per_page')
+    // Mais bien sûr il faudrait utiliser un paramètre, 
+    //et y accéder via $this->container->getParameter('nb_per_page')
     $nbPerPage = 3;
 
     // On récupère notre objet Paginator
