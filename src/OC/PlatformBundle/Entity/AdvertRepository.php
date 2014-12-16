@@ -32,8 +32,7 @@ class AdvertRepository extends EntityRepository
       ->setMaxResults($nbPerPage)
     ;
 
-    // Enfin, on retourne l'objet Paginator correspondant à la requête construite
-    // (n'oubliez pas le use correspondant en début de fichier)
+    // On retourne l'objet Paginator correspondant à la requête construite
     return new Paginator($query, true);
   }
   

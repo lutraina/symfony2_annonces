@@ -9,3 +9,5 @@ services:
     main_core.antispam:
         class: Main\CoreBundle\Antispam\MainAntispam
         arguments: [@mailer, %locale%, 50]
+        tags:
+            -  { name: twig.extension }

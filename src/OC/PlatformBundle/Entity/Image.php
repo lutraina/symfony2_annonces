@@ -135,10 +135,9 @@ class Image
     }
 
     // Le nom du fichier est son id, on doit juste stocker également son extension
-    // Pour faire propre, on devrait renommer cet attribut en « extension », plutôt que « url »
     $this->url = $this->file->guessExtension();
 
-    // Et on génère l'attribut alt de la balise <img>, à la valeur du nom du fichier sur le PC de l'internaute
+    // On génère l'attribut alt de la balise <img>, à la valeur du nom du fichier sur le PC de l'internaute
     $this->alt = $this->file->getClientOriginalName();
   }
 

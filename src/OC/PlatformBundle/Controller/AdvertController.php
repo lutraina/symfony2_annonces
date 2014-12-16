@@ -21,6 +21,14 @@ class AdvertController extends Controller
   public function indexAction($page)
   {
   	
+	    $antispam = $this->container->get('main_core.antispam');
+	
+	    // Je pars du principe que $text contient le texte d'un message quelconque
+	    $text = 'azer azer a';
+	    if ($antispam->isSpam($text)) {
+	      throw new \Exception('Votre message a été détecté comme spam !');
+	    }
+	
 	
     if ($page < 1) {
       throw $this->createNotFoundException("La page ".$page." n'existe pas.");
@@ -89,10 +97,10 @@ class AdvertController extends Controller
   {
   	
 	// On vérifie que l'utilisateur dispose bien du rôle ROLE_AUTEUR
-    if (!$this->get('security.context')->isGranted('ROLE_AUTEUR')) {
+   /* if (!$this->get('security.context')->isGranted('ROLE_AUTEUR')) {
       // Sinon on déclenche une exception « Accès interdit »
       throw new AccessDeniedException('Accès limité aux auteurs.');
-    }
+    }*/
 	
 
     $advert = new Advert();
@@ -128,7 +136,6 @@ class AdvertController extends Controller
     $form = $this->createForm(new AdvertEditType(), $advert);
 
     if ($form->handleRequest($request)->isValid()) {
-      // Inutile de persister ici, Doctrine connait déjà notre annonce
       $em->flush();
 
       $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée.');
@@ -182,7 +189,7 @@ class AdvertController extends Controller
       ->getRepository('OCPlatformBundle:Advert')
       ->findBy(
         array(),                 // Pas de critère
-        array('id' => 'desc'), // On trie par date décroissante
+        array('id' => 'desc'),   // On trie par date décroissante
         $limit,                  // On sélectionne $limit annonces
         0                        // À partir du premier
     );

@@ -20,18 +20,18 @@ class AdvertType extends AbstractType
       ->add('date',      'date', array('label' => false))
       ->add('title',     'text')
       ->add('author',    'text', array('label' => false))
-      ->add('content',   'textarea')
+      ->add('content',   'ckeditor')
 	  ->add('categories', 'collection', array(
         'type'         => new CategoryType(),
         'allow_add'    => true,
         'allow_delete' => true
       ))
-	  
-	  /*'entity', array(
-  'class'    => 'OCPlatformBundle:Category',
-  'property' => 'name',
-  'multiple' => true
-	   */ 
+	  //pour les catégories avec des options en format multiple
+	  	/*'entity', array(
+  			'class'    => 'OCPlatformBundle:Category',
+  			'property' => 'name',
+  			'multiple' => true
+	    */ 
 	  ->add('image',      new ImageType()) // Ajoutez cette ligne
      // ->add('published', 'checkbox', array('required' => false))
       ->add('save',      'submit')
@@ -39,7 +39,7 @@ class AdvertType extends AbstractType
 	
 		// On ajoute une fonction qui va écouter un évènement
 	    $builder->addEventListener(
-	      FormEvents::PRE_SET_DATA,    // 1er argument : L'évènement qui nous intéresse : ici, PRE_SET_DATA
+	      FormEvents::PRE_SET_DATA,    // 1er argument : L'évènement  PRE_SET_DATA
 	      function(FormEvent $event) { // 2e argument : La fonction à exécuter lorsque l'évènement est déclenché
 	        // On récupère notre objet Advert sous-jacent
 	        $advert = $event->getData();

@@ -7,13 +7,19 @@ services:
         class: OC\PlanningBundle\Antispam\OCAntispam
         arguments: [@mailer, @main_core.antispam, %locale%, 50]
         
+        
     oc_platform.doctrine.notification:
         class: OC\PlatformBundle\DoctrineListener\ApplicationNotification
         arguments: [@mailer]
         tags:
             - { name: doctrine.event_listener, event: postPersist }
             
-                      
+    sdz_blog.ckeditor:
+        class: OC\PlatformBundle\Form\Type\CkeditorType
+        tags:
+            - { name: form.type, alias: ckeditor }
+            
+                              
    # oc_platform.antispam:
     #    class: OC\PlatformBundle\Antispam\OCAntispam
      #   arguments: [@mailer, %locale%, 50]

@@ -18,21 +18,19 @@ class DefaultController extends Controller
 	    }
 		
 		
-		// On récupère le service
+		// Récupération du service
 	    $antispam2 = $this->container->get('oc_planning.InputValidator');
-	
-	    // Je pars du principe que $text contient le texte d'un message quelconque
+
 	    $email = 'contact@lucianahembert.com';
 	    if (!$antispam2->emailValidator($email)) {
 	      throw new \Exception('Votre adresse email est incorrecte');
 	    }
 		
-		// On récupère le service
+		// Récupération du service
 	    $antispam2 = $this->container->get('oc_planning.InputValidator');
 	
-	    // Je pars du principe que $text contient le texte d'un message quelconque
-	    $email = '69001';
-	    if ($antispam2->code_postal($email)) {
+	    $cp = '69001';
+	    if ($antispam2->code_postal($cp)) {
 	      throw new \Exception('Votre code postal est incorrect');
 	    }
 		

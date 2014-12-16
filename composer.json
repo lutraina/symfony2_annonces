@@ -23,7 +23,9 @@
   		"twbs/bootstrap": "3.2.*",
         "components/jquery":"1.9.*",
         "stof/doctrine-extensions-bundle": "~1.1",
-        "gedmo/doctrine-extensions":      "master-dev"
+        "gedmo/doctrine-extensions":      "master-dev",
+        "friendsofsymfony/user-bundle": "dev-master",
+        "ikimea/ckeditor-bundle": "dev-master"
 
     },
     "scripts": {

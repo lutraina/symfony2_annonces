@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ee86d0baf90724d8813b40ac636c3e1a",
+    "hash": "1c3dfba8504a1e177a4df65ea88c49ba",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -815,6 +815,73 @@
             "time": "2014-10-06 13:22:50"
         },
         {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "3565dfb22df2b0791137d5244d34d528d887f73e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/3565dfb22df2b0791137d5244d34d528d887f73e",
+                "reference": "3565dfb22df2b0791137d5244d34d528d887f73e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/security-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "*",
+                "swiftmailer/swiftmailer": ">=4.3, <6.0",
+                "symfony/validator": "~2.3",
+                "symfony/yaml": "~2.3",
+                "willdurand/propel-typehintable-behavior": "dev-master"
+            },
+            "suggest": {
+                "willdurand/propel-typehintable-behavior": "Needed when using the propel implementation"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\UserBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
+            ],
+            "time": "2014-11-19 10:34:13"
+        },
+        {
             "name": "gedmo/doctrine-extensions",
             "version": "dev-master",
             "source": {
@@ -889,6 +956,58 @@
                 "uploadable"
             ],
             "time": "2014-10-05 20:50:56"
+        },
+        {
+            "name": "ikimea/ckeditor-bundle",
+            "version": "dev-master",
+            "target-dir": "Ikimea/CKEditorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ikimea/CKEditorBundle.git",
+                "reference": "b6b4ee728a5367dc7fce8ea62b2135168b3931bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ikimea/CKEditorBundle/zipball/b6b4ee728a5367dc7fce8ea62b2135168b3931bb",
+                "reference": "b6b4ee728a5367dc7fce8ea62b2135168b3931bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/browser-kit": "2.1.x-dev",
+                "symfony/dom-crawler": "2.1.x-dev",
+                "symfony/finder": "2.2.x-dev",
+                "symfony/form": "2.1.x-dev",
+                "symfony/framework-bundle": "2.1.x-dev",
+                "twig/extensions": "1.0.x-dev"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Ikimea\\CKEditorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mbechezi Mlanawo",
+                    "email": "mlanawo.mbechezi@ikimea.com",
+                    "homepage": "http://www.ikimea.com"
+                }
+            ],
+            "description": "Integrate CKEditor with Symfony2 ",
+            "homepage": "https://github.com/Ikimea/CKEditorBundle",
+            "keywords": [
+                "CKEditor",
+                "bundle",
+                "components"
+            ],
+            "time": "2013-04-24 19:12:41"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1923,7 +2042,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "gedmo/doctrine-extensions": 20
+        "gedmo/doctrine-extensions": 20,
+        "friendsofsymfony/user-bundle": 20,
+        "ikimea/ckeditor-bundle": 20
     },
     "prefer-stable": false,
     "platform": {
