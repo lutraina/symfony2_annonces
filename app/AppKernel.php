@@ -29,8 +29,9 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new OC\UserBundle\OCUserBundle(),
            // new Ikimea\CKEditorBundle\Ikimea\CKEditorBundle(),
-          //  new FOS\UserBundle\FOSUserBundle(),
-           new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+           //new FOS\UserBundle\FOSUserBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new OC\FOSUserBundle\OCFOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
