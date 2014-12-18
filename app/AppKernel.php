@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new OC\UserBundle\OCUserBundle(),
            // new Ikimea\CKEditorBundle\Ikimea\CKEditorBundle(),
           //  new FOS\UserBundle\FOSUserBundle(),
+           new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

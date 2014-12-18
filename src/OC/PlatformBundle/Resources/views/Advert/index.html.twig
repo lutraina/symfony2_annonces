@@ -8,6 +8,8 @@
 
 {% block ocplatform_body %}
 
+
+          
 <h5>Liste des annonces</h5>
 {% if is_granted('ROLE_AUTEUR') %}
   <li style="list-style: none; color:#fff;" class="btn btn-primary"><a style="color:#fff;" href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
